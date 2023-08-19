@@ -1,4 +1,4 @@
- pipeline{
+pipeline{
  agent any
  stages{
  stage('code checkout'){
@@ -8,7 +8,7 @@
  }
  stage('Execute Ansible'){
   steps{
-     ansiblePlaybook credentialsId: 'ansible1', disableHostKeyChecking: true, inventory: 'dhost.inv', playbook: 'apache.yml' l 
+     ansiblePlaybook credentialsId: 'ansible1', disableHostKeyChecking: true, inventory: 'dhost.inv', playbook: 'apache.yml'  
       }
     }
 }
